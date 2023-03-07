@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-go-basic-qsub
+  namespace: samburrai-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:4a5b2dce8521d0432ce0fe3688427c6f67ab687ca10664ed9d91f15496dcec49
+        name: my-go
+        resources: {}
+status: {}
